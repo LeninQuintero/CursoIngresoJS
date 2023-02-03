@@ -3,18 +3,19 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Curso Ingreso UTN FRA</title>
-		
-		<!--Estilos-->
+
+			<!--Estilos-->
 		<link rel="stylesheet" type="text/css" href="../estilo.css">
 		<link rel="stylesheet" type="text/css" href="../animacion.css">
 		<!--final de Estilos-->
 
 		<!--Lógica-Programación-->
-		<script type="text/javascript" src="jsEntradaSalida-05.js">
-</script>
+		<script type="text/javascript" src="jsIntegradorClase-2.js"></script>
         <!--Final de Lógica-Programación -->
 		
-	
+
+
+
         <link rel="icon" type="image/x-icon" href="../favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
@@ -24,7 +25,7 @@
 <div class=" animated bounceIn header">
     
 
-     <center><h5>E/S  <strong> Ejercicio 5 </strong> </h5></center> 
+     <center><h5> <strong> Ejercicio integrador clase 2 </strong> </h5></center> 
    <a  class="MiBotonUTNnav" onclick="location.href='index.html'" ><i class="far fa-hand-point-left"></i>Men&uacute; ejercicios</a> 
 </div>
 
@@ -38,11 +39,9 @@
   <div class="col-6 col-s-9">
    	
 		<form class=" animated bounceInLeft FormIngreso">
-		<h1>Ingrese Su Nombre</h1>
-			<input type="text"  placeholder="Su nombre" id="txtIdNombre">
-
-				<input type="text"  placeholder="Su edad" id="txtIdEdad">
-				
+		<h1>Ingrese el valor de la compra</h1>
+		<input type="text"  placeholder="valor" id="txtIdValorCompra">
+		  
 			<a  class="MiBotonUTNnav" onclick="mostrar()" >Mostrar</a>
 			
 
@@ -52,14 +51,16 @@
 
   <div class="col-3 col-s-12">
     <div class="aside animated bounceInUp">
-    <h2>Enunciado:</h2>
+     <h2>Enunciado:</h2>
 			
 				<h3>
-					Debemos lograr tomar nombre y edad por ID.value 
-				</br>mostrarlos <em>concatenados </em>
-				</h3>
-				<h3>
-					ej.: "Usted se llama José y tiene 66 años" 
+					Se ingresará por id el valor de una compra de productos
+                    <br> para el hogar. Se deberá agregar el iva (21%) 
+                    <br> y  luego se deberá restar el 5% en concepto de compra mayorista. 
+                    <br> El programa deberá mostrar por alert importe bruto, el iva, 
+                    <br> el importe con iva, el valor del descuento y el total a pagar.
+
+					
 				</h3>
 			
      
