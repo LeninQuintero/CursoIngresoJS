@@ -11,23 +11,26 @@ function mostrar()
 {
 	let valorIngresado;
     let iva;
-    let valorConIva;
+    let valorIva;
     let descuentoMayorista;
-    let valorConDescuento;
+    let valorDescuento;
+    let totalPagar;
 
 	valorIngresado = document.getElementById('txtIdValorCompra').value;
     valorIngresado = parseFloat(valorIngresado);
-
-    descuentoMayorista = 5;
-    valorConDescuento = valorIngresado - (valorIngresado / 100) * descuentoMayorista;
     
     iva = 21; 
-    valorConIva = (valorConDescuento / 100) * iva + valorConDescuento;
+    valorIva = ((valorIngresado / 100) * iva + valorIngresado) - valorIngresado;
 
+    descuentoMayorista = 5;
+    valorDescuento = valorIva - ((valorIva / 100) * descuentoMayorista);
+
+    totalPagar = valorIngresado + valorIva - valorDescuento;
+    
 	alert(
         'Importe Bruto: ' + valorIngresado +
-        '\nDescuento mayorista (' + descuentoMayorista + '%) = ' + valorConDescuento +
-        '\nIva(' + iva + '%) = ' + valorConIva +
-        '\nTotal a pagar = ' + valorConIva
+        '\nIva(' + iva + '%) = ' + valorIva +
+        '\nDescuento mayorista (' + descuentoMayorista + '%) = ' + valorDescuento +
+        '\nTotal a pagar = ' + totalPagar
         );
 }
