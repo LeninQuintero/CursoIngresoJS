@@ -28,7 +28,8 @@ function CentigradosFahrenheit ()
     temperatura = document.getElementById('txtIdTemperatura').value;
     temperatura = parseFloat(temperatura);
 
-    fahrenheit = temperatura * 33.8;
+    fahrenheit = (temperatura * 9/5) + 32;
+
 
     alert(temperatura + ' grados centígrados equivalean a ' + fahrenheit.toFixed(3) + ' grados fahrenheit.');
 }

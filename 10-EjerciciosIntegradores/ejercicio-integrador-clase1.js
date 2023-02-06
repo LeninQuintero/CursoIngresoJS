@@ -12,11 +12,17 @@ Por ejemplo: 30-22666548-7
 
 function mostrar() {
 
-    let nombreTitular = prompt('Nombre del titular:')
-    let dni = document.getElementById('dniTitular').value;
-    let fechaDeInicio = document.getElementById('fechaInicio').value;
-    let razonSocial = prompt('Razon Social de la Empresa:')
-    let cuitEmpresa = '30-' + dni + '-' + Math.floor(Math.random() * 10);
+    let nombreTitular;
+    let dni;
+    let fechaDeInicio;
+    let razonSocial;
+    let cuitEmpresa;
+
+    nombreTitular = prompt('Nombre del titular:')
+    dni = document.getElementById('dniTitular').value;
+    fechaDeInicio = document.getElementById('fechaInicio').value;
+    razonSocial = prompt('Razon Social de la Empresa:')
+    cuitEmpresa = '30-' + dni + '-' + Math.floor(Math.random() * 10);
 
 
     alert(

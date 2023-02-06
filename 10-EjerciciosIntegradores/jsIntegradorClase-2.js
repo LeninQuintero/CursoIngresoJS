@@ -20,7 +20,7 @@ function mostrar()
     valorIngresado = parseFloat(valorIngresado);
     
     iva = 21; 
-    valorIva = ((valorIngresado / 100) * iva + valorIngresado) - valorIngresado;
+    valorIva = (valorIngresado / 100) * iva;
 
     descuentoMayorista = 5;
     valorDescuento = valorIva - ((valorIva / 100) * descuentoMayorista);
