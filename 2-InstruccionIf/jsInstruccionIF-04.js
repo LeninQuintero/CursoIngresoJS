@@ -1,7 +1,11 @@
+// Lenin Quintero, Div 'D', grupo 2
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	let edad;
+	edad = document.getElementById('txtIdEdad').value;
 
-
-}//FIN DE LA FUNCIÓN
+	 if (edad > 12 && edad < 18){
+		alert('Es adolecente.');
+	 } 
+}
