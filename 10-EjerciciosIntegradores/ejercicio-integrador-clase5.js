@@ -14,7 +14,7 @@ A tener en cuenta: Si preguntamos la altura del usuario y no puede subir no debe
 */
 
 function puedeSubir() {
-    
+
     let altura;
     altura = prompt('Ingrese su altura: ');
     altura = parseInt(altura);
@@ -25,7 +25,7 @@ function puedeSubir() {
         edad = prompt('Ingrese su edad: ');
         edad = parseInt(edad);
 
-        if (edad < 19 || edad > 80){
+        if (edad < 18 || edad > 80){
             alert('El monto a pagar es $200');
         }
         else {
@@ -33,6 +33,6 @@ function puedeSubir() {
         }
     } 
     else {
-        alert('No puede subir a la montaña rusa.')
+        alert('No puede subir a la montaña rusa.');
     }
 }
