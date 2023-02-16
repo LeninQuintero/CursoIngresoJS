@@ -25,7 +25,6 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
     cantidadLamp = parseInt(cantidadLamp);
 
     marcaLamp = document.getElementById('Marca').value;
-    descuento = 0;
 
     precioLamp = 35;
 
@@ -33,6 +32,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
         case 1:
         case 2:
+            descuento = 0;
             break;
 
         case 3:
@@ -76,11 +76,12 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
     importeBruto = cantidadLamp * precioLamp;
     valorDescuento = (importeBruto / 100) * descuento;
     importeFinal = importeBruto - valorDescuento;
-    importeIIBB = (importeFinal / 100) * 10;
-    document.getElementById('txtIdprecioDescuento').value = importeFinal.toFixed(2);
-
+    
     if (importeFinal > 120) {
+        importeIIBB = (importeFinal / 100) * 10;
         document.getElementById('txtIdprecioDescuento').value = (importeFinal + importeIIBB).toFixed(2);
         alert('Usted pago ' + importeIIBB.toFixed(2) + ' de IIBB.');
+    }else {
+        document.getElementById('txtIdprecioDescuento').value = importeFinal.toFixed(2);
     }
 }
