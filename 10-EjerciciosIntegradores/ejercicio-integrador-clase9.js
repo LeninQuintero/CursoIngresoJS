@@ -18,9 +18,7 @@ hasta que el usuario quiera, mostrar:
 */
 
 function mostrar() {
-
     //declarar contadores y variables 
-    let numBandera;
     let respuesta;
     let numeroIngresado;
     let sumaNegativos;
@@ -41,7 +39,6 @@ function mostrar() {
     let indicePorcentaje;
 
     //inicializacion de variables
-    numBandera = true;
     sumaNegativos = 0;
     sumaPositivos = 0;
     cantidadNegativos = 0;
@@ -54,58 +51,36 @@ function mostrar() {
         numeroIngresado = prompt("Ingrese un numero: ");
         numeroIngresado = parseInt(numeroIngresado);
 
-        if (numBandera) {
-            maximoPositivo = numeroIngresado;
-            minimoNegativo = numeroIngresado;
-            numBandera = false;
+        //validacion numero par
+        if (numeroIngresado % 2 == 0) {
+            cantidadPares++; //contador nuemeros pares              
         }
 
-        //validacion numero par
-        if ((numeroIngresado % 2 == 0 || numeroIngresado % 2 == -0) && numeroIngresado != 0) {
+        //numeros positivos
+        if (numeroIngresado > 0) {
+            sumaPositivos = sumaPositivos + numeroIngresado;
+            cantidadPositivos++; //contador de positivos
 
-            //numeros positivos
-            if (numeroIngresado > 0) {
-                //validar si es maximo
-                if (numeroIngresado > maximoPositivo) {
-                    maximoPositivo = numeroIngresado;
-                }
-                sumaPositivos = sumaPositivos + numeroIngresado;
-                cantidadPositivos++; //contador
-
-            } else { //numeros negativos
+            //validar si es maximo
+            if (numeroIngresado > maximoPositivo || cantidadPositivos == 1) {
+                maximoPositivo = numeroIngresado;
+            }
+            
+        } else {
+            //numeros negativos
+            if (numeroIngresado < 0) {
+                sumaNegativos = sumaNegativos + numeroIngresado;
+                cantidadNegativos++; //contador de negativos
 
                 //validar si es minimo
-                if (numeroIngresado < minimoNegativo) {
+                if (numeroIngresado < minimoNegativo || cantidadNegativos == 1) {
                     minimoNegativo = numeroIngresado;
                 }
-                sumaNegativos = sumaNegativos + numeroIngresado;
-                cantidadNegativos++; //contador
-            }
-            cantidadPares++; //contador nuemeros pares
-        } else { //si NO es par
 
-            //numeros positivos
-            if (numeroIngresado > 0) {
-                //validar si es maximo
-                if (numeroIngresado > maximoPositivo) {
-                    maximoPositivo = numeroIngresado;
-                }
-                sumaPositivos = sumaPositivos + numeroIngresado;
-                cantidadPositivos++; //contador de positivos
             } else {
-                //numeros negativos
-                if (numeroIngresado < 0) {
-                    //validar si es minimo
-                    if (numeroIngresado < minimoNegativo) {
-                        minimoNegativo = numeroIngresado;
-                    }
-                    sumaNegativos = sumaNegativos + numeroIngresado;
-                    cantidadNegativos++; //contador de negativos
-                } else {
-                    //validar que sea cero y no NaN
-                    if (numeroIngresado == 0) {
-                        cantidadCeros++; //contador de ceros
-                    }
+                
+                if(numeroIngresado == 0){
+                cantidadCeros++; //contador de ceros
                 }
             }
         }
@@ -118,7 +93,7 @@ function mostrar() {
 
     //calculo de diferencia
     diferencia = sumaPositivos + sumaNegativos; //suma algebraica
-    
+
     //total de numeros ingresados
     contadorNumeros = cantidadPositivos + cantidadNegativos + cantidadCeros;
 
@@ -135,11 +110,33 @@ function mostrar() {
     document.write("4-> La cantidad de negativos es: " + cantidadNegativos + "<br>");
     document.write("5-> La cantidad de ceros es: " + cantidadCeros + "<br>");
     document.write("6-> La cantidad de numeros pares es: " + cantidadPares + "<br>");
-    document.write("7-> El promedio de numeros positivos es: " + promedioPositivos + "<br>");
-    document.write("8-> El promedio de numeros negativos es: " + promedioNegativos + "<br>");
+
+    if (cantidadPositivos != 0) {
+        promedioNegativos = sumaNegativos / cantidadNegativos;
+        document.write("7-> El promedio de numeros positivos es: " + promedioPositivos.toFixed(2) + "<br>");
+    } else {
+        document.write("7-> No se pudo mostrar el promedio de los numeros positivos porque no se ingreso ninguno" + "<br>");
+    }
+    
+    if (cantidadNegativos != 0) {
+        promedioNegativos = sumaNegativos / cantidadNegativos;
+        document.write("8-> El promedio de numeros negativos es: " + promedioNegativos.toFixed(2) + "<br>");
+    } else {
+        document.write("8-> No se pudo mostrar el promedio de los numeros negativos porque no se ingreso ninguno" + "<br>");
+    }
+
     document.write("9-> La diferencia entre numeros positivos y negativos es: " + diferencia + "<br>");
     document.write("10-> El " + porcentajePositivos.toFixed(1) + "% de numeros ingresados son POSITIVOS, el " + porcentajeNegativos.toFixed(1) + "% son NEGATIVOS y el " + porcentajeCeros.toFixed(1) + "% son CEROS <br>");
-    document.write("11-> El número máximo de los positivos es: " + maximoPositivo + "<br>");
-    document.write("12-> El número mínimo de los negativos es: " + minimoNegativo);
-
+    
+    if (cantidadPositivos != 0) {
+        document.write("11-> El número máximo de los positivos es: " + maximoPositivo + "<br>");
+    } else {
+        document.write("11-> No se pudo mostrar el numero máximo positivo porque no se ingreso ninguno" + "<br>");
+    }
+   
+    if (cantidadNegativos != 0) {
+        document.write("12-> El número mínimo de los negativos es: " + minimoNegativo);
+    } else {
+        document.write("12-> No se pudo mostrar el numero mínimo negativo porque no se ingreso ninguno");
+    }
 }//FIN DE LA FUNCIÓN
