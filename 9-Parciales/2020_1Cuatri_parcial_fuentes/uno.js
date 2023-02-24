@@ -17,11 +17,12 @@ function mostrar() {
 	let cantidadJabon;
 	let cantidadBarbijo;
 	let cantidadAlcohol;
-	let contadorDatos;
 
 	let unidadesJabon;
 	let unidadesAlcohol;
 	let unidadesBarbijo;
+
+	let contadorDatos;
 
 	contadorDatos = 0;
 	cantidadJabon = 0;
@@ -34,10 +35,10 @@ function mostrar() {
 
 	while (contadorDatos < 5) {
 
-		tipoProducto = prompt('Ingrese un tipo de producto, las opciones son: \n\nbarbijo \njabon \nalcohol');
+		tipoProducto = prompt('Ingrese un tipo de producto, las opciones son: \n\n-barbijo \n-jabon \n-alcohol');
 
 		while (tipoProducto != 'barbijo' && tipoProducto != 'jabon' && tipoProducto != 'alcohol') {
-			tipoProducto = prompt('Opcion NO valida, ingrese de nuevo un tipo de producto, las opciones son: \n\nbarbijo \njabon \nalcohol');
+			tipoProducto = prompt('Opcion NO valida, ingrese de nuevo un tipo de producto, las opciones son: \n\n-barbijo \n-jabon \n-alcohol');
 		}
 
 		precioProducto = prompt('Ingrese el precio');
