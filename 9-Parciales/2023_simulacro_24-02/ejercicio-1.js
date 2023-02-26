@@ -30,5 +30,5 @@ NOTA: Deben poder ingresarse todos números positivos, no se deben pueden ingres
 *******************************************************************************/
 
 function mostrar(){
-    alert('hola');
+    alert('uno2023');
 }

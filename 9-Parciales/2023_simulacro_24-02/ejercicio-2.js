@@ -34,5 +34,5 @@ e) Cantidad de perros ingresados por otitis.
 
 
 function mostrar(){
-    alert('dos');
+    alert('dos2023');
 }
