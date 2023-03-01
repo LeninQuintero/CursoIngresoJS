@@ -59,7 +59,7 @@ function mostrar() {
     let nombreMuebleMasLiviano;
 
     let promedioPorVenta;
-    let indicePorcentaje;
+    let centesimo;
     let porcentajeMadera;
     let porcentajeMetal;
     let porcentajeVidrio;
@@ -86,6 +86,9 @@ function mostrar() {
 
     while (respuesta) {
         nombre = prompt('Ingrese el nombre del mueble:');
+        while(nombre == '' || nombre == null) {
+            nombre = prompt('Dato NO valido, ingrese de nuevo el nombre del mueble:');
+        }
 
         material = prompt('Ingrese el material del mueble, las opciones son: \n\n-madera \n-metal \n-vidrio');
         while (material != 'madera' && material != 'metal' && material != 'vidrio') {
@@ -177,14 +180,11 @@ function mostrar() {
         respuesta = confirm('¿Desea continuar?');
     }
 
-
     promedioPorVenta = totalFinal / totalMuebles;
-
-    indicePorcentaje = totalMuebles / 100;
-    porcentajeMadera = totalMueblesMadera / indicePorcentaje;
-    porcentajeMetal = totalMueblesMetal / indicePorcentaje;
-    porcentajeVidrio = totalMueblesVidrio / indicePorcentaje;
-
+    centesimo = totalMuebles / 100;
+    porcentajeMadera = totalMueblesMadera / centesimo;
+    porcentajeMetal = totalMueblesMetal / centesimo;
+    porcentajeVidrio = totalMueblesVidrio / centesimo;
 
     document.write('A-> El precio promedio por mueble vendido es de: $' + promedioPorVenta.toFixed(2) + '<br>');
     document.write('B-> La cantidad total de muebles de madera vendidos es: ' + totalMueblesMadera + '<br>');
@@ -202,6 +202,6 @@ function mostrar() {
     if (totalMueblesMadera > 0) {
         document.write('G-> El monto final recaudado por la venta de muebles de madera despues de impuestos y descuentos es de: $' + totalRecaudadoMadera.toFixed(2));
     } else {
-        document.write('G-> No se vendio ningun mueble de madera por lo tanto la recaudación fue $0');
+        document.write('G-> No se vendio ningun mueble de madera, por lo tanto la recaudación para este material fue de $0');
     }
 }
