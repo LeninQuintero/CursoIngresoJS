@@ -19,7 +19,6 @@ d) Porcentaje de computadoras de cada marca.
 e) De las computadoras DESKTOP de marca DELL, el modelo de la mas cara.
 Pedir datos por prompt y mostrar la información por document.write.
 
-
 *******************************************************************************/
 
 function mostrar() {
@@ -33,7 +32,6 @@ function mostrar() {
     let modeloMasCara;
     let desktopDellMasCara;
     let contadorHpDesktop;
-    let contadorDellDesktop;
     let contadorGeneral;
     let contadorAcer;
     let contadorHP;
@@ -45,8 +43,8 @@ function mostrar() {
     let porcentajeHp;
     let porcentajeDell;
     let porcentajeAcer;
+    let banderaDellDesktop;
 
-    contadorDellDesktop = 0;
     contadorHpDesktop = 0;
     contadorAcer = 0;
     contadorDell = 0;
@@ -54,6 +52,7 @@ function mostrar() {
     acumuladorPrecioAcer = 0;
     contadorGeneral = 0;
 
+    banderaDellDesktop = true;
     respuesta = true;
 
     while (respuesta) {
@@ -85,15 +84,14 @@ function mostrar() {
             case 'ACER':
                 contadorAcer++;
                 acumuladorPrecioAcer = acumuladorPrecioAcer + precio;
-
                 break;
 
             case 'DELL':
                 contadorDell++;
                 if (tipoPc == 'DESKTOP') {
-                    contadorDellDesktop++;
-                    if (precio > desktopDellMasCara || contadorDellDesktop == 1) {
+                    if (precio > desktopDellMasCara || banderaDellDesktop) {
                         modeloMasCara = modelo;
+                        banderaDellDesktop = false;
                     }
                 }
                 break;
@@ -136,5 +134,4 @@ function mostrar() {
     } else {
         document.write('E-> No se puede determinar cual es el modelo de computadoras DESKTOP de marca DELL mas cara porque no se vendio ninguna.');
     }
-
 }

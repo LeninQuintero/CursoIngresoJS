@@ -34,7 +34,6 @@ b) Cuál fue el tipo de producto con más unidades vendidas.
 c) De la venta con más unidades el nombre del cliente y el tipo de producto.
 d) En caso de haber excedido el monto de $1300 sumarle un 20% de impuestos.
 
-
 Tener en cuenta:
 Si se compran más de dos docenas de medialunas/churros por ejemplo. El descuento del 30% se sigue aplicando, eso aplica para cualquier otro caso similar.
 Por cada venta que se hace se ingresa un sólo tipo de producto (café o medialunas o churros)
@@ -147,7 +146,7 @@ function venta(){
 
         importeFinal = importeFinal + importeVenta;
         respuesta = confirm('¿Desea continuar?');
-    }
+    }// Fin del while
 
     if(acumuladorMedialunas > acumuladorChurros && acumuladorMedialunas > acumuladorCafes){
         tipoMasVendido = 'Medialunas';
@@ -167,7 +166,6 @@ function venta(){
         importeConImpuesto = importeFinal * 1.2;
         document.write('D-> Como el importe final supero los $1300 se le aplico un impuesto del 20% y debe pagar : $' + importeConImpuesto);
     } else{
-        importeConImpuesto = importeFinal;
-        document.write('D-> Como el importe final NO supero los $1300  no se le aplicaron impuestos y debe pagar : $' + importeConImpuesto);
+        document.write('D-> Como el importe final NO supero los $1300  no se le aplicaron impuestos y debe pagar : $' + importeFinal);
     }
 }
