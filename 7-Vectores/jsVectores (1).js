@@ -14,12 +14,12 @@ function mostrar()
 	miArray[8]=5;
 	miArray[9]=7;
 
-document.write("El contenido del vector es: <br>");
+document.write("El contenido del vector es: ");
 
 	for(var i=0; i<10; i++)
 	{
 
-		document.write("Posicion "+i+"-->"+miArray[i]+"<br>");
+		document.write("Posicion "+i+"-->"+miArray[i]+"");
 	}
 
 

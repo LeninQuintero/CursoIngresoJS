@@ -15,7 +15,7 @@ function mostrar()
 	for(var i=0; i<5; i++)
 	{
 
-		document.write("Posicion "+i+"-->"+miArray[i]+"<br>");
+		document.write("Posicion "+i+"-->"+miArray[i]+"");
 
 
 	}

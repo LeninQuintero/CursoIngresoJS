@@ -171,9 +171,9 @@ function informar() {
 
 //    promedioPeso=****************************
 
-    document.write('A-> El producto con mas peso entre las tres bodegas pesa ' + productoMasPeso + ' Kg. y el promedio general es de' + promedioPeso + 'Kg.' + '<br>');
-    document.write('B-> La bodega con mas ingresos fue: ' + bodegaMasIngresos + '<br>');
-    document.write('C-> La bodega mas llena es: ' + bodegaMasLlena + ' con un ' + porcentajeMasLlena + '% de capacidad ocupada.' + '<br>');
+    document.write('A-> El producto con mas peso entre las tres bodegas pesa ' + productoMasPeso + ' Kg. y el promedio general es de' + promedioPeso + 'Kg.' + '');
+    document.write('B-> La bodega con mas ingresos fue: ' + bodegaMasIngresos + '');
+    document.write('C-> La bodega mas llena es: ' + bodegaMasLlena + ' con un ' + porcentajeMasLlena + '% de capacidad ocupada.' + '');
     document.write('D-> La bodega "Avellaneda" tiene una disponibilidad del '
         + porcentajeDisponibleAvellaneda + '%, "Caba" tiene '
         + porcentajeDisponibleCaba + '% de capacidad disponible y "Lanus" un '

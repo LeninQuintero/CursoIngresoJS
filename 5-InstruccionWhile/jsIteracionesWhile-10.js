@@ -85,13 +85,13 @@ function mostrar() {
 	diferencia = sumaPositivos + sumaNegativos; //suma algebraica
 
 
-	document.write("La suma de negativos es :" + sumaNegativos + '<br>');
-	document.write("La suma de positivos es :" + sumaPositivos + '<br>');
-	document.write("La cantidad de positivos es :" + cantidadPositivos + '<br>');
-	document.write("La cantidad de negativos es :" + cantidadNegativos + '<br>');
-	document.write("La cantidad de ceros es :" + cantidadCeros + '<br>');
-	document.write("La cantidad de numeros pares es :" + cantidadPares + '<br>');
-	document.write("El promedio de numeros positivos es :" + promedioPositivos + '<br>');
-	document.write("El promedio de numeros negativos es :" + promedioNegativos + '<br>');
-	document.write("La diferencia entre numeros positivos y negativos es :" + diferencia + '<br>');
+	document.write("La suma de negativos es :" + sumaNegativos + '');
+	document.write("La suma de positivos es :" + sumaPositivos + '');
+	document.write("La cantidad de positivos es :" + cantidadPositivos + '');
+	document.write("La cantidad de negativos es :" + cantidadNegativos + '');
+	document.write("La cantidad de ceros es :" + cantidadCeros + '');
+	document.write("La cantidad de numeros pares es :" + cantidadPares + '');
+	document.write("El promedio de numeros positivos es :" + promedioPositivos + '');
+	document.write("El promedio de numeros negativos es :" + promedioNegativos + '');
+	document.write("La diferencia entre numeros positivos y negativos es :" + diferencia + '');
 }//FIN DE LA FUNCIÓN

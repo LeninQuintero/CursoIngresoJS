@@ -78,13 +78,13 @@ while(contadorParticipantes < 50){
     }
 }
 
-document.write('A-> La cantidad de participantes mayores de edad es: '+ contadorMayoresEdad + '<br>');
+document.write('A-> La cantidad de participantes mayores de edad es: '+ contadorMayoresEdad + '');
 
 if(contadorFemenino > 0){
     promedioEdadFemenino = acumuladorFemenino / contadorFemenino;
-    document.write('B-> El promedio de edad de todas las participantes femeninas es: ' + promedioEdadFemenino + '<br>');
+    document.write('B-> El promedio de edad de todas las participantes femeninas es: ' + promedioEdadFemenino + '');
 } else {
-    document.write('B-> No se puede calcular el promedio de edad de las participantes femeninas porque no se ingreso ninguna.' + '<br>');
+    document.write('B-> No se puede calcular el promedio de edad de las participantes femeninas porque no se ingreso ninguna.' + '');
 }
 
 document.write('C-> El nombre del participante con mejor score es: ' + nombreMejorScore);

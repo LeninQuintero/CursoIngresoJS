@@ -10,12 +10,12 @@ function mostrar()
 	miArray[4]="Yolanda";
 
 
-document.write("El contenido del vector es: <br>");
+document.write("El contenido del vector es: ");
 
 	for(var i=0; i<5; i++)
 	{
 
-		document.write("Posicion "+i+"-->"+miArray[i]+"<br>");
+		document.write("Posicion "+i+"-->"+miArray[i]+"");
 	}
 
 

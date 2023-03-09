@@ -100,11 +100,11 @@ function mostrar() {
 	}
 
 	if (cantidadAlcohol > 0) {
-		document.write('El mas barato de los acohol es de la marca ' + marcaAlcoholBarato + ' fabricado por: ' + fabricanteAlcoholBarato + ' y se ingrasaron ' + unidadesAlcoholBarato + ' unidades.' + '<br>');
+		document.write('El mas barato de los acohol es de la marca ' + marcaAlcoholBarato + ' fabricado por: ' + fabricanteAlcoholBarato + ' y se ingrasaron ' + unidadesAlcoholBarato + ' unidades.' + '');
 	} else {
-		document.write('No se pueden mostrar los datos del alcohol porque no se cargo ninguno.' + '<br>');
+		document.write('No se pueden mostrar los datos del alcohol porque no se cargo ninguno.' + '');
 	}
 
-	document.write('El ' + tipoMasUnidades + ' es el tipo de producto con mas unidades y el promedio por compra es ' + promedioMasUnidades + '<br>');
+	document.write('El ' + tipoMasUnidades + ' es el tipo de producto con mas unidades y el promedio por compra es ' + promedioMasUnidades + '');
 	document.write('En total hay ' + unidadesJabon + ' unidad(es) de jabon(es).');
 }

@@ -117,17 +117,17 @@ function mostrar() {
     porcentajeDell = contadorDell / centecimaTotalPc;
     porcentajeHp = contadorHP / centecimaTotalPc;
 
-    document.write('A-> El precio de la PC más barata es: ' + pcMasBarata + '<br>');
-    document.write('B-> La cantidad total de PC marca HP del tipo DESKTOP es: ' + contadorHpDesktop + '<br>');
+    document.write('A-> El precio de la PC más barata es: ' + pcMasBarata + '');
+    document.write('B-> La cantidad total de PC marca HP del tipo DESKTOP es: ' + contadorHpDesktop + '');
 
     if (contadorAcer > 0) {
         promedioPrecioAcer = acumuladorPrecioAcer / contadorAcer;
-        document.write('C-> El promedio del precio de las PC marca ACER es: ' + promedioPrecioAcer + '<br>');
+        document.write('C-> El promedio del precio de las PC marca ACER es: ' + promedioPrecioAcer + '');
     } else {
-        document.write('C-> No se pudo calcular el promedio del precio de las PC marca ACER porque no se ingreso ninguna' + '<br>');
+        document.write('C-> No se pudo calcular el promedio del precio de las PC marca ACER porque no se ingreso ninguna' + '');
     }
 
-    document.write('D-> Porcentaje de computadoras de cada marca: \n-DELL: ' + porcentajeDell + '%' + '\n-HP: ' + porcentajeHp + '%' + '\n-ACER: ' + porcentajeAcer + '%' + '<br>');
+    document.write('D-> Porcentaje de computadoras de cada marca: \n-DELL: ' + porcentajeDell + '%' + '\n-HP: ' + porcentajeHp + '%' + '\n-ACER: ' + porcentajeAcer + '%' + '');
 
     if (modeloMasCara != null) {
         document.write('E-> De las computadoras DESKTOP de marca DELL, el modelo de la mas cara es: ' + modeloMasCara);

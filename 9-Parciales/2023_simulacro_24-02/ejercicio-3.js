@@ -186,18 +186,18 @@ function mostrar() {
     porcentajeMetal = totalMueblesMetal / centesimo;
     porcentajeVidrio = totalMueblesVidrio / centesimo;
 
-    document.write('A-> El precio promedio por mueble vendido es de: $' + promedioPorVenta.toFixed(2) + '<br>');
-    document.write('B-> La cantidad total de muebles de madera vendidos es: ' + totalMueblesMadera + '<br>');
+    document.write('A-> El precio promedio por mueble vendido es de: $' + promedioPorVenta.toFixed(2) + '');
+    document.write('B-> La cantidad total de muebles de madera vendidos es: ' + totalMueblesMadera + '');
 
     if (totalMueblesMetal > 0) {
-        document.write('C-> El mueble de metal mas alto es: ' + nombreMuebleMasAlto + ' que mide ' + muebleMetalMasAlto.toFixed(2) + '<br>');
+        document.write('C-> El mueble de metal mas alto es: ' + nombreMuebleMasAlto + ' que mide ' + muebleMetalMasAlto.toFixed(2) + '');
     } else {
-        document.write('C-> No es posible mostrar el mueble de metal mas alto porque no se ingreso ninguno' + '<br>');
+        document.write('C-> No es posible mostrar el mueble de metal mas alto porque no se ingreso ninguno' + '');
     }
 
-    document.write('D-> El mueble mas liviano es: ' + nombreMuebleMasLiviano + ' con un peso de ' + muebleMasLiviano + '<br>');
-    document.write('E-> El ' + porcentajeMadera.toFixed(2) + '%  de muebles vendidos fue de MADERA, el ' + porcentajeMetal.toFixed(2) + '% fue de METAL y el ' + porcentajeVidrio.toFixed(2) + '% de VIDRIO' + '<br>');
-    document.write('F-> El monto total bruto recaudado fue de: $' + totalBruto.toFixed(2) + '<br>');
+    document.write('D-> El mueble mas liviano es: ' + nombreMuebleMasLiviano + ' con un peso de ' + muebleMasLiviano + '');
+    document.write('E-> El ' + porcentajeMadera.toFixed(2) + '%  de muebles vendidos fue de MADERA, el ' + porcentajeMetal.toFixed(2) + '% fue de METAL y el ' + porcentajeVidrio.toFixed(2) + '% de VIDRIO' + '');
+    document.write('F-> El monto total bruto recaudado fue de: $' + totalBruto.toFixed(2) + '');
 
     if (totalMueblesMadera > 0) {
         document.write('G-> El monto final recaudado por la venta de muebles de madera despues de impuestos y descuentos es de: $' + totalRecaudadoMadera.toFixed(2));

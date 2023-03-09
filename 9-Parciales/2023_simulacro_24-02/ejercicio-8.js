@@ -71,7 +71,6 @@ function venta(){
     importeConImpuesto = 0;
     importeFinal = 0;
     importeDescuento = 0;
-    
 
     while(respuesta){
 
@@ -107,7 +106,7 @@ function venta(){
                         if(cantidad > 4){
                             descuento = 0.05;
                         } else{
-                            descuento = 1;
+                            descuento = 0;
                         }
                     }
                 }
@@ -115,6 +114,8 @@ function venta(){
         }else{
             if(cantidad == 1){
                 descuento = 0.05;
+            }else{
+                descuento = 0;
             }
         }
     
@@ -158,9 +159,9 @@ function venta(){
         }
     }
 
-    document.write('A-> Se vendieron un total de ' + acumuladorMedialunas + ' medialunas en toda la jornada.' + '<br>');
-    document.write('B-> El tipo de producto con más unidades vendidas fue: ' + tipoMasVendido + '.<br>');
-    document.write('C-> De la venta con más unidades el nombre del cliente fue: ' + nombreMasUnidades +' y el tipo de producto fue: ' + tipoMasUnidades + '.<br>');
+    document.write('A-> Se vendieron un total de ' + acumuladorMedialunas + ' medialunas en toda la jornada.' + '');
+    document.write('B-> El tipo de producto con más unidades vendidas fue: ' + tipoMasVendido + '.');
+    document.write('C-> De la venta con más unidades el nombre del cliente fue: ' + nombreMasUnidades +' y el tipo de producto fue: ' + tipoMasUnidades + '.');
     
     if(importeFinal > 1300){
         importeConImpuesto = importeFinal * 1.2;

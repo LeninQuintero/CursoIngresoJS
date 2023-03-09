@@ -197,16 +197,16 @@ function ventasPasajes() {
     promedioPrimeraClase = recaudacionPrimeraClase / contadorPrimeraClase;
 
     document.write('A-> El total de pesos recaudados por vendedor: '
-        + '<br>- Pepepeposo recaudo $' + recaudacionPepepeposo.toFixed(2)
-        + '<br>- Quinoto recaudo $' + recaudacionQuinoto.toFixed(2)
-        + '<br>- Huesos recaudo $' + recaudacionHuesos.toFixed(2) + '<br>');
+        + '- Pepepeposo recaudo $' + recaudacionPepepeposo.toFixed(2)
+        + '- Quinoto recaudo $' + recaudacionQuinoto.toFixed(2)
+        + '- Huesos recaudo $' + recaudacionHuesos.toFixed(2) + '');
 
-    document.write('B-> El vendedor que mas recaudo es: ' + mejorVendedor + ' y total recaudado por el fue de $' + mejorRecaudacion.toFixed(2) + '<br>');
-    document.write('C-> La venta de vuelos Nacionales representa un ' + porcentajeNacionales.toFixed(2) + '% y los vuelos Internaconales un ' + porcentajeInternacionales.toFixed(2) + '%' + '<br>')
-    document.write('D-> Se vendieron ' + contPaquetesDirectosInt + ' paquetes directos e internacionales' + '<br>');
+    document.write('B-> El vendedor que mas recaudo es: ' + mejorVendedor + ' y total recaudado por el fue de $' + mejorRecaudacion.toFixed(2) + '');
+    document.write('C-> La venta de vuelos Nacionales representa un ' + porcentajeNacionales.toFixed(2) + '% y los vuelos Internaconales un ' + porcentajeInternacionales.toFixed(2) + '%' + '')
+    document.write('D-> Se vendieron ' + contPaquetesDirectosInt + ' paquetes directos e internacionales' + '');
 
     document.write('F-> El promedio de ventas de los paquetes de viajes con respecto al tipo de asiento seleccionado por el cliente es: '
-        + '<br>- La clase Economica obtuvo un promedio de: ' + promedioEconomico + ' por venta.'
-        + '<br>- La clase Ejecutiva obtuvo un promedio de: ' + promedioEjecutivo + ' por venta.'
-        + '<br>- La primera clase obtuvo un promedio de: ' + promedioPrimeraClase + ' por venta.');
+        + '- La clase Economica obtuvo un promedio de: ' + promedioEconomico + ' por venta.'
+        + '- La clase Ejecutiva obtuvo un promedio de: ' + promedioEjecutivo + ' por venta.'
+        + '- La primera clase obtuvo un promedio de: ' + promedioPrimeraClase + ' por venta.');
 }

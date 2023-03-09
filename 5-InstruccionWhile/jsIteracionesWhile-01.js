@@ -8,7 +8,7 @@ function mostrar()
 
 	while (numeroAscendente < 10) {
 
-		document.write('El numero ascendente es: ' + (numeroAscendente + 1) + '<br>');
+		document.write('El numero ascendente es: ' + (numeroAscendente + 1) + '');
 		numeroAscendente++;
 
 		// Otras formas de aumentar***

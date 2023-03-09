@@ -104,34 +104,34 @@ function mostrar() {
     porcentajeCeros = cantidadCeros / indicePorcentaje;
 
     //presentacion de datos
-    document.write("1-> La suma de negativos es: " + sumaNegativos + "<br>");
-    document.write("2-> La suma de positivos es: " + sumaPositivos + "<br>");
-    document.write("3-> La cantidad de positivos es: " + cantidadPositivos + "<br>");
-    document.write("4-> La cantidad de negativos es: " + cantidadNegativos + "<br>");
-    document.write("5-> La cantidad de ceros es: " + cantidadCeros + "<br>");
-    document.write("6-> La cantidad de numeros pares es: " + cantidadPares + "<br>");
+    document.write("1-> La suma de negativos es: " + sumaNegativos + "");
+    document.write("2-> La suma de positivos es: " + sumaPositivos + "");
+    document.write("3-> La cantidad de positivos es: " + cantidadPositivos + "");
+    document.write("4-> La cantidad de negativos es: " + cantidadNegativos + "");
+    document.write("5-> La cantidad de ceros es: " + cantidadCeros + "");
+    document.write("6-> La cantidad de numeros pares es: " + cantidadPares + "");
 
     if (cantidadPositivos != 0) {
         promedioNegativos = sumaNegativos / cantidadNegativos;
-        document.write("7-> El promedio de numeros positivos es: " + promedioPositivos.toFixed(2) + "<br>");
+        document.write("7-> El promedio de numeros positivos es: " + promedioPositivos.toFixed(2) + "");
     } else {
-        document.write("7-> No se pudo mostrar el promedio de los numeros positivos porque no se ingreso ninguno" + "<br>");
+        document.write("7-> No se pudo mostrar el promedio de los numeros positivos porque no se ingreso ninguno" + "");
     }
     
     if (cantidadNegativos != 0) {
         promedioNegativos = sumaNegativos / cantidadNegativos;
-        document.write("8-> El promedio de numeros negativos es: " + promedioNegativos.toFixed(2) + "<br>");
+        document.write("8-> El promedio de numeros negativos es: " + promedioNegativos.toFixed(2) + "");
     } else {
-        document.write("8-> No se pudo mostrar el promedio de los numeros negativos porque no se ingreso ninguno" + "<br>");
+        document.write("8-> No se pudo mostrar el promedio de los numeros negativos porque no se ingreso ninguno" + "");
     }
 
-    document.write("9-> La diferencia entre numeros positivos y negativos es: " + diferencia + "<br>");
-    document.write("10-> El " + porcentajePositivos.toFixed(1) + "% de numeros ingresados son POSITIVOS, el " + porcentajeNegativos.toFixed(1) + "% son NEGATIVOS y el " + porcentajeCeros.toFixed(1) + "% son CEROS <br>");
+    document.write("9-> La diferencia entre numeros positivos y negativos es: " + diferencia + "");
+    document.write("10-> El " + porcentajePositivos.toFixed(1) + "% de numeros ingresados son POSITIVOS, el " + porcentajeNegativos.toFixed(1) + "% son NEGATIVOS y el " + porcentajeCeros.toFixed(1) + "% son CEROS ");
     
     if (cantidadPositivos != 0) {
-        document.write("11-> El número máximo de los positivos es: " + maximoPositivo + "<br>");
+        document.write("11-> El número máximo de los positivos es: " + maximoPositivo + "");
     } else {
-        document.write("11-> No se pudo mostrar el numero máximo positivo porque no se ingreso ninguno" + "<br>");
+        document.write("11-> No se pudo mostrar el numero máximo positivo porque no se ingreso ninguno" + "");
     }
    
     if (cantidadNegativos != 0) {

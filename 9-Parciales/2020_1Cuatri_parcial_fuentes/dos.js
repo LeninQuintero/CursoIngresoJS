@@ -106,7 +106,7 @@ function mostrar() {
 		}
 	}
 
-	document.write('A-> El importe bruto a pagar es: $' + importeBruto.toFixed(2) + '<br>');
+	document.write('A-> El importe bruto a pagar es: $' + importeBruto.toFixed(2) + '');
 
 	if (descuento != 0) {
 		let valorDescuento;
@@ -115,11 +115,11 @@ function mostrar() {
 		valorDescuento = (importeBruto / 100) * descuento;
 		importeConDescuento = importeBruto - valorDescuento;
 
-		document.write('B-> El importe a pagar con descuento es: $' + importeConDescuento.toFixed(2) + '<br>');
+		document.write('B-> El importe a pagar con descuento es: $' + importeConDescuento.toFixed(2) + '');
 	} else {
-		document.write('B-> No hay ningun descuento en esta compra.' + '<br>');
+		document.write('B-> No hay ningun descuento en esta compra.' + '');
 	}
 
-	document.write('C-> El tipo con mas cantidad de bolsas vendidas es: ' + tipoMasUnidades + '<br>');
+	document.write('C-> El tipo con mas cantidad de bolsas vendidas es: ' + tipoMasUnidades + '');
 	document.write('D-> El tipo mas caro es: ' + tipoMasCaro);
 }
